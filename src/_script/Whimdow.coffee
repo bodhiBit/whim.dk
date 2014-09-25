@@ -2,10 +2,7 @@
   Whimdow class
 ###
 class Whimdow
-  Object.defineProperties @::,
-    dynamicProp:
-      get: -> @_dynamicProp
-      set: (@_dynamicProp) ->
+  lastZIndex: 10
   
   constructor: (@contentEl) ->
     @titleEl = @contentEl.querySelector "h1"
@@ -89,12 +86,14 @@ class Whimdow
 
   _moveStart: (e) ->
     do e.preventDefault
+    @windowEl.style.zIndex = Whimdow::lastZIndex++
     @_mouseDragX = e.pageX - @windowEl.offsetLeft
     @_mouseDragY = e.pageY - @windowEl.offsetTop
     @isMoving = true
   
   _resizeStart: (e) ->
     do e.preventDefault
+    @windowEl.style.zIndex = Whimdow::lastZIndex++
     @_mouseDragX = e.pageX - @windowEl.offsetLeft
     @_mouseDragY = e.pageY - @windowEl.offsetTop
     @isResizing = true

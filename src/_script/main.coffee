@@ -5,8 +5,10 @@ Whimdow = require "./Whimdow.coffee"
  main.coffee
  This script does nothing so far...
 ###
+windows = []
 
 init = ->
-  projWindow = new Whimdow document.querySelector "article#projects"
+  for el in document.querySelectorAll "article"
+    windows.push new Whimdow el
 
 addEventListener "DOMContentLoaded", init
