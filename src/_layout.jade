@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title whim.dk - Portfolio for Tommy Pedersen
+    link(rel="stylesheet", type="text/css", href="style/style.css")
+  body
+    header#top
+      h1 whim.dk
+      p Geeky creativity
+    nav
+      ul
+        li.current
+          a(href="#top") whim.dk
+        li
+          a(href="#about") About me
+        li
+          a(href="#projects") Projects
+        li
+          a(href="#contact") Contact me
+    main
+      != yield
+    footer
+      p
+        a(href="//validator.w3.org/check/referer") HTML5 valid
+    script(src="script.js")
