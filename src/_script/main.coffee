@@ -8,7 +8,12 @@ Whimdow = require "./Whimdow.coffee"
 windows = []
 
 init = ->
+  time = 1000
   for el in document.querySelectorAll "article"
-    windows.push new Whimdow el
+    time += -100
+    do (_el=el) ->
+      setTimeout ->
+        windows.push new Whimdow _el
+      , time
 
 addEventListener "DOMContentLoaded", init
