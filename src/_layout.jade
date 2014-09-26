@@ -11,14 +11,22 @@ html
       p Geeky creativity
     nav
       ul
-        li.current
-          a(href="#top") whim.dk
-        li
-          a(href="#about") About me
-        li
-          a(href="#projects") Projects
-        li
-          a(href="#contact") Contact me
+        li(am-icon)
+          a(href="#top")
+            img(alt="icon", src="icons/tools.png")
+            | whim.dk
+        li(am-icon)
+          a(href="#about")
+            img(alt="icon", src="icons/about.png")
+            | About me
+        li(am-icon)
+          a(href="#projects")
+            img(alt="icon", src="icons/work.png")
+            | Projects
+        li(am-icon)
+          a(href="#contact")
+            img(alt="icon", src="icons/contact.png")
+            | Contact me
     main
       != yield
     footer
