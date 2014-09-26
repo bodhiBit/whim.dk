@@ -2,6 +2,8 @@
   Whimdow class
 ###
 class Whimdow
+  lastLeftPos: 32
+  lastTopPos: 32
   lastZIndex: 10
   
   constructor: (@contentEl) ->
@@ -50,6 +52,10 @@ class Whimdow
     @hScrollShaftEl = @windowEl.querySelector '[am-scrollbar~="h"] [am-scrollshaft]'
     @hScrollSliderEl = @windowEl.querySelector '[am-scrollbar~="h"] [am-scrollslider]'
     
+    Whimdow::lastLeftPos += 32
+    Whimdow::lastTopPos += 48
+    @windowEl.style.left = Whimdow::lastLeftPos + "px"
+    @windowEl.style.top = Whimdow::lastTopPos + "px"
     document.body.appendChild @windowEl
     
     @titlebarEl.addEventListener "mousedown", @_moveStart.bind @
