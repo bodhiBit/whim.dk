@@ -1,182 +1,217 @@
 x-whimdow
-  border_width =        42px
-  border_top_width =    border_width
-  border_bottom_width = border_width
-  border_left_width =   border_width
-  border_right_width =  border_width
-  viewport_top =        .7em
+  border_width =                32px
+  border_top_width =            border_width * 1.5
+  border_bottom_width =         border_width * 1.5
+  border_left_width =           border_width * 1.5
+  border_right_width =          border_width * 1.5
+  viewport_top =                .7em
   
-  background-color      white
-  background-image      url("paper_texture.png")
-  position              absolute
+  background-color              white
+  background-image              url("paper_texture.png")
+  position                      absolute
   
-  left                  10%
-  top                   10%
-  width                 75%
-  height                50%
+  left                          10%
+  top                           10%
+  width                         75%
+  height                        50%
   
   [am-titlebar]
-    background-image    url("horizontal_line.png")
-    background-position bottom
-    background-repeat   repeat-x
-    cursor              move
-    font-size           1.2em
-    position            absolute
-    text-align          center
+    background-image            url("horizontal_line.png")
+    background-position         bottom
+    background-repeat           repeat-x
+    cursor                      move
+    font-size                   1.2em
+    position                    absolute
+    text-align                  center
     
-    left                - border_left_width * .8
-    right               - border_right_width * .8
-    top                 - border_top_width * .8
+    left                        - border_width
+    right                       - border_width
+    top                         - border_width
+    height                      border_width * 1.5
     
     h1
-      display           inline-block
-      font-weight       bold
-      margin            .2em
+      display                   inline-block
+      font-weight               bold
+      margin                    .2em
+      overflow                  hidden
+      text-overflow             ellipsis
+      max-width                 70%
+      max-width                 calc( 100% - 100px )
+      white-space               nowrap
     
     button
-      background-color  transparent
-      border-width      0
+      background-color          transparent
+      border-width              0
     
     [am-widget]
-      float             right
-      width             32px
-      height            32px
+      background-position       center
+      background-repeat         no-repeat
+      float                     right
+      width                     border_width * 1.5
+      height                    border_width * 1.5
     
     [am-widget~="icon"]
-      float             left
+      background-image          url("icon_button.png")
+      float                     left
+    
+    [am-widget~="close"]
+      background-image          url("close_button.png")
   
   [am-viewport]
-    overflow            hidden
-    position            absolute
+    overflow                    hidden
+    padding                     1em
+    position                    absolute
     
-    left                0
-    top                 viewport_top
-    right               0
-    bottom              0
+    left                        - border_width
+    top                         viewport_top
+    right                       0
+    bottom                      0
 
   
   [am-scrollbar~="v"]
-    background-color    #eee
-    position            absolute
+    background-image            url("vertical_line.png")
+    background-position         left
+    background-repeat           repeat-y
+    position                    absolute
     
-    top                 viewport_top
-    bottom              0
-    right               - border_right_width * .8
-    width               border_right_width * .8
+    top                         viewport_top
+    bottom                      0
+    right                       - border_width
+    width                       border_width
     
     [am-scrollshaft]
-      background-color  #ddd
-      position          absolute
+      background-image          url("vertical_shaft.png")
+      background-position       center
+      position                  absolute
       
-      top               border_right_width * .8
-      bottom            border_right_width * .8
-      left              0
-      right             0
+      top                       border_width
+      bottom                    border_width
+      left                      0
+      right                     0
       
       [am-scrollslider]
-        background-color  #ccc
-        position        absolute
+        background-image        url("horizontal_line.png"), url("vertical_line.png"), url("horizontal_line.png"), url("vertical_knob.png"), url("paper_texture.png")
+        background-position     top, left, bottom, center, center
+        background-repeat       repeat-x, repeat-y, repeat-x, no-repeat, repeat
+        position                absolute
         
-        left            0
-        right           0
-        top             0%
-        height          100%
+        left                    0
+        right                   0
+        top                     0%
+        height                  100%
   
   [am-scrollbar~="h"]
-    background-color    #eee
-    position            absolute
+    background-image            url("horizontal_line.png")
+    background-position         top
+    background-repeat           repeat-x
+    position                    absolute
     
-    left                - border_left_width * .8
-    right               0
-    bottom              - border_bottom_width * .8
-    height              border_bottom_width * .8
+    left                        - border_width
+    right                       0
+    bottom                      - border_width
+    height                      border_width
     
     [am-scrollshaft]
-      background-color  #ddd
-      position          absolute
+      background-image          url("horizontal_shaft.png")
+      background-position       center
+      position                  absolute
       
-      left              border_bottom_width * .8
-      right             border_bottom_width * .8
-      top               0
-      bottom            0
+      left                      border_width
+      right                     border_width
+      top                       0
+      bottom                    0
       
       [am-scrollslider]
-        background-color  #ccc
-        position        absolute
+        background-image        url("vertical_line.png"), url("horizontal_line.png"), url("vertical_line.png"), url("horizontal_knob.png"), url("paper_texture.png")
+        background-position     right, top, left, center, center
+        background-repeat       repeat-y, repeat-x, repeat-y, no-repeat, repeat
+        position                absolute
         
-        bottom          0
-        top             0
-        left            0%
-        width           100%
+        bottom                  0
+        top                     0
+        left                    0%
+        width                   100%
   
   [am-scrollbutton]
-    position            absolute
+    background-color            transparent
+    background-position         center
+    background-repeat           no-repeat
+    border-width                0
+    position                    absolute
 
-    width               border_right_width * .8
-    height              border_bottom_width * .8
+    width                       border_width
+    height                      border_width
 
   [am-scrollbutton~="up"]
-    top                 0
+    background-image            url("up_button.png"), url("horizontal_line.png")
+    background-position         center, bottom
+    top                         0
 
   [am-scrollbutton~="down"]
-    bottom              0
+    background-image            url("down_button.png"), url("horizontal_line.png"), url("horizontal_line.png")
+    background-position         center, bottom, top
+    bottom                      0
     
   [am-scrollbutton~="left"]
-    left                0
+    background-image            url("left_button.png"), url("vertical_line.png")
+    background-position         center, right
+    left                        0
 
   [am-scrollbutton~="right"]
-    right               0
+    background-image            url("right_button.png"), url("vertical_line.png"), url("vertical_line.png")
+    background-position         center, right, left
+    right                       0
 
   [am-border]
-    background-image    url("paper_border.png")
-    position            absolute
-    width               100%
-    height              100%
+    background-image            url("paper_border.png")
+    position                    absolute
+    width                       100%
+    height                      100%
   
   [am-border="n"], [am-border="s"]
-    background-image    url("paper_border_horizontal.png")
+    background-image            url("paper_border_horizontal.png")
   
   [am-border="w"], [am-border="e"]
-    background-image    url("paper_border_vertical.png")
+    background-image            url("paper_border_vertical.png")
   
   [am-border~="n"]
-    top                 - border_top_width
-    height              border_top_width
+    top                         - border_top_width
+    height                      border_top_width
   
   [am-border~="s"]
-    bottom              - border_bottom_width
-    height              border_bottom_width
+    bottom                      - border_bottom_width
+    height                      border_bottom_width
   
   [am-border~="w"]
-    left                - border_left_width
-    width               border_left_width
+    left                        - border_left_width
+    width                       border_left_width
   
   [am-border~="e"]
-    right               - border_right_width
-    width               border_right_width
+    right                       - border_right_width
+    width                       border_right_width
   
   [am-border="n w"]
-    background-position top left
+    background-position         top left
   
   [am-border="n"]
-    background-position top
+    background-position         top
   
   [am-border="n e"]
-    background-position top right
+    background-position         top right
   
   [am-border="w"]
-    background-position left
+    background-position         left
   
   [am-border="e"]
-    background-position right
+    background-position         right
   
   [am-border="s w"]
-    background-position bottom left
+    background-position         bottom left
   
   [am-border="s"]
-    background-position bottom
+    background-position         bottom
   
   [am-border="s e"]
-    background-position bottom right
-    cursor              se-resize
+    background-position         bottom right
+    cursor                      se-resize
   
