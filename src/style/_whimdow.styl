@@ -12,7 +12,7 @@ x-whimdow
   
   left                          10%
   top                           10%
-  width                         75%
+  width                         60%
   height                        50%
   
   [am-titlebar]
@@ -20,7 +20,7 @@ x-whimdow
     background-position         bottom
     background-repeat           repeat-x
     cursor                      move
-    font-size                   1.2em
+    font-size                   1.4em
     position                    absolute
     text-align                  center
     
@@ -30,13 +30,16 @@ x-whimdow
     height                      border_width * 1.5
     
     h1
+      /* background-image          url("title_hilite.png")
+      background-position       center
+      background-repeat         no-repeat
+      background-size           100% auto */
       display                   inline-block
       font-weight               bold
-      margin                    .2em
       overflow                  hidden
       text-overflow             ellipsis
       max-width                 70%
-      max-width                 calc( 100% - 100px )
+      max-width                 calc( 100% - 128px )
       white-space               nowrap
     
     button
