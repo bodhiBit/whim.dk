@@ -56,6 +56,9 @@ class Whimdow
     Whimdow::lastTopPos += 48
     @windowEl.style.left = Whimdow::lastLeftPos + "px"
     @windowEl.style.top = Whimdow::lastTopPos + "px"
+    angle = -0.5 + do Math.random
+    @windowEl.style.webkitTransform = "rotate("+angle+"deg)"
+    @windowEl.style.transform = "rotate("+angle+"deg)"
     document.body.appendChild @windowEl
     
     @titlebarEl.addEventListener "mousedown", @_moveStart.bind @
