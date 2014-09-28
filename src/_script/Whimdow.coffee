@@ -62,28 +62,26 @@ class Whimdow
     document.body.appendChild @windowEl
     
     @titlebarEl.addEventListener "mousedown", @_moveStart.bind @
+    @titlebarEl.addEventListener "touchstart", @_moveStart.bind @
     @resizeEl.addEventListener "mousedown", @_resizeStart.bind @
+    @resizeEl.addEventListener "touchstart", @_resizeStart.bind @
     @scrollSliderEl.addEventListener "mousedown", @_scrollStart.bind @
+    @scrollSliderEl.addEventListener "touchstart", @_scrollStart.bind @
     @hScrollSliderEl.addEventListener "mousedown", @_hScrollStart.bind @
+    @hScrollSliderEl.addEventListener "touchstart", @_hScrollStart.bind @
     document.body.addEventListener "mousemove", @_drag.bind @
+    document.body.addEventListener "touchmove", @_drag.bind @
     document.addEventListener "mouseup", @_dragEnd.bind @
+    document.addEventListener "touchend", @_dragEnd.bind @
     
     (@windowEl.querySelector '[am-scrollbutton="up"]').addEventListener "mousedown", =>
-      @_autoScrollTO = setInterval =>
-        @viewportEl.scrollTop += -32
-      , 100
+      @viewportEl.scrollTop += -32
     (@windowEl.querySelector '[am-scrollbutton="down"]').addEventListener "mousedown", =>
-      @_autoScrollTO = setInterval =>
-        @viewportEl.scrollTop += 32
-      , 100
+      @viewportEl.scrollTop += 32
     (@windowEl.querySelector '[am-scrollbutton="left"]').addEventListener "mousedown", =>
-      @_autoScrollTO = setInterval =>
-        @viewportEl.scrollLeft += -32
-      , 100
+      @viewportEl.scrollLeft += -32
     (@windowEl.querySelector '[am-scrollbutton="right"]').addEventListener "mousedown", =>
-      @_autoScrollTO = setInterval =>
-        @viewportEl.scrollLeft += 32
-      , 100
+      @viewportEl.scrollLeft += 32
     @windowEl.addEventListener "wheel", (e) =>
       do e.preventDefault
       unit = if e.deltaMode then 32 else 1
@@ -94,45 +92,49 @@ class Whimdow
     requestAnimationFrame @_updateScrollSlider.bind @
 
   _moveStart: (e) ->
+    pageX = e.pageX or e.changedTouches[0].pageX
+    pageY = e.pageY or e.changedTouches[0].pageY
     do e.preventDefault
     @windowEl.style.zIndex = Whimdow::lastZIndex++
-    @_mouseDragX = e.pageX - @windowEl.offsetLeft
-    @_mouseDragY = e.pageY - @windowEl.offsetTop
+    @_mouseDragX = pageX - @windowEl.offsetLeft
+    @_mouseDragY = pageY - @windowEl.offsetTop
     @isMoving = true
   
   _resizeStart: (e) ->
     do e.preventDefault
     @windowEl.style.zIndex = Whimdow::lastZIndex++
-    @_mouseDragX = e.pageX - @windowEl.offsetLeft
-    @_mouseDragY = e.pageY - @windowEl.offsetTop
     @isResizing = true
   
   _scrollStart: (e) ->
+    pageY = e.pageY or e.changedTouches[0].pageY
     do e.preventDefault
-    @_mouseDragY = e.pageY
+    @_mouseDragY = pageY
     @_viewportDragY = @viewportEl.scrollTop
     @_viewportScrollRatio = @contentEl.offsetHeight / @scrollShaftEl.offsetHeight
     @isScrolling = true
   
   _hScrollStart: (e) ->
+    pageX = e.pageX or e.changedTouches[0].pageX
     do e.preventDefault
-    @_mouseDragX = e.pageX
+    @_mouseDragX = pageX
     @_viewportDragX = @viewportEl.scrollLeft
     @_viewportScrollRatio = @contentEl.offsetWidth / @hScrollShaftEl.offsetWidth
     @isHScrolling = true
   
   _drag: (e) ->
+    pageX = e.pageX or e.changedTouches[0].pageX
+    pageY = e.pageY or e.changedTouches[0].pageY
     if @isMoving
-      @windowEl.style.left = (e.pageX - @_mouseDragX) + "px"
-      @windowEl.style.top = (e.pageY - @_mouseDragY) + "px"
+      @windowEl.style.left = (pageX - @_mouseDragX) + "px"
+      @windowEl.style.top = (pageY - @_mouseDragY) + "px"
     if @isResizing
-      @windowEl.style.width = (e.pageX - @windowEl.offsetLeft - 16) + "px"
-      @windowEl.style.height = (e.pageY - @windowEl.offsetTop - 16) + "px"
+      @windowEl.style.width = (pageX - @windowEl.offsetLeft - 16) + "px"
+      @windowEl.style.height = (pageY - @windowEl.offsetTop - 16) + "px"
     if @isScrolling
-      @viewportEl.scrollTop = @_viewportDragY - @_viewportScrollRatio * (@_mouseDragY - e.pageY)
+      @viewportEl.scrollTop = @_viewportDragY - @_viewportScrollRatio * (@_mouseDragY - pageY)
       do @_updateScrollSlider
     if @isHScrolling
-      @viewportEl.scrollLeft = @_viewportDragX - @_viewportScrollRatio * (@_mouseDragX - e.pageX)
+      @viewportEl.scrollLeft = @_viewportDragX - @_viewportScrollRatio * (@_mouseDragX - pageX)
       do @_updateScrollSlider
 
   _dragEnd: (e) ->
