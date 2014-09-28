@@ -8,6 +8,9 @@ Whimdow = require "./Whimdow.coffee"
 windows = []
 
 init = ->
+  (document.querySelector "header").classList.add "docked"
+  (document.querySelector "nav").classList.add "docked"
+  (document.querySelector "footer").classList.add "docked"
   time = 1000
   for el in document.querySelectorAll "article"
     time += -100

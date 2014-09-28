@@ -2,7 +2,7 @@
   Whimdow class
 ###
 class Whimdow
-  lastLeftPos: 32
+  lastLeftPos: 198
   lastTopPos: 32
   lastZIndex: 10
   
@@ -56,7 +56,7 @@ class Whimdow
     Whimdow::lastTopPos += 48
     @windowEl.style.left = Whimdow::lastLeftPos + "px"
     @windowEl.style.top = Whimdow::lastTopPos + "px"
-    angle = -0.5 + do Math.random
+    angle = -1 + 3 * do Math.random
     @windowEl.style.webkitTransform = "rotate("+angle+"deg)"
     @windowEl.style.transform = "rotate("+angle+"deg)"
     document.body.appendChild @windowEl
