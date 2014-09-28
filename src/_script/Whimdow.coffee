@@ -90,7 +90,8 @@ class Whimdow
       @viewportEl.scrollTop += e.deltaY * unit
       do @_updateScrollSlider
     
-    (@windowEl.querySelector '[am-widget="close"]').addEventListener "click", @close.bind @
+    (@windowEl.querySelector '[am-widget="close"]').addEventListener "mouseup", @close.bind @
+    (@windowEl.querySelector '[am-widget="close"]').addEventListener "touchend", @close.bind @
     
     requestAnimationFrame @_updateScrollSlider.bind @
     requestAnimationFrame @close.bind @
@@ -98,7 +99,11 @@ class Whimdow
   open: ->
     @windowEl.classList.remove "closed"
     @windowEl.classList.add "open"
+    scrollTop = @viewportEl.scrollTop
+    scrollLeft = @viewportEl.scrollLeft
     document.body.appendChild @windowEl
+    @viewportEl.scrollTop = scrollTop
+    @viewportEl.scrollLeft = scrollLeft
     requestAnimationFrame @_updateScrollSlider.bind @
     
   close: ->

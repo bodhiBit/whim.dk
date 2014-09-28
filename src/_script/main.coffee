@@ -1,5 +1,6 @@
 "use strict"
 Whimdow = require "./Whimdow.coffee"
+Whicon = require "./Whicon.coffee"
 
 ###
  main.coffee
@@ -17,6 +18,8 @@ initDesktop = ->
   (document.querySelector "header").classList.add "docked"
   (document.querySelector "nav").classList.add "docked"
   (document.querySelector "footer").classList.add "docked"
+  for el in document.querySelectorAll "nav li"
+    new Whicon el
   for el in document.querySelectorAll "article"
     windows[el.id] = new Whimdow el
   
