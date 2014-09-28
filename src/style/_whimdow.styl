@@ -41,6 +41,7 @@ x-whimdow
       font-weight               bold
       overflow                  hidden
       text-overflow             ellipsis
+      margin                    0
       max-width                 70%
       max-width                 calc( 100% - 128px )
       white-space               nowrap
@@ -62,17 +63,16 @@ x-whimdow
     
     [am-widget~="close"]
       background-image          url("close_button.png")
+      cursor                    pointer
   
   [am-viewport]
     overflow                    hidden
-    padding                     1em
     position                    absolute
     
     left                        - border_width
     top                         viewport_top
     right                       0
     bottom                      0
-
   
   [am-scrollbar~="v"]
     background-image            url("vertical_line.png")
