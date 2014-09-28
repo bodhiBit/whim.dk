@@ -1,10 +1,11 @@
+"use strict"
+
 ###
   Whimdow class
 ###
 class Whimdow
   lastLeftPos: 198
   lastTopPos: 32
-  lastZIndex: 10
   
   constructor: (@contentEl) ->
     @titleEl = @contentEl.querySelector "h1"
@@ -89,20 +90,33 @@ class Whimdow
       @viewportEl.scrollTop += e.deltaY * unit
       do @_updateScrollSlider
     
+    (@windowEl.querySelector '[am-widget="close"]').addEventListener "click", @close.bind @
+    
     requestAnimationFrame @_updateScrollSlider.bind @
-
+    requestAnimationFrame @close.bind @
+  
+  open: ->
+    @windowEl.classList.remove "closed"
+    @windowEl.classList.add "open"
+    document.body.appendChild @windowEl
+    requestAnimationFrame @_updateScrollSlider.bind @
+    
+  close: ->
+    @windowEl.classList.remove "open"
+    @windowEl.classList.add "closed"
+  
   _moveStart: (e) ->
     pageX = e.pageX or e.changedTouches[0].pageX
     pageY = e.pageY or e.changedTouches[0].pageY
     do e.preventDefault
-    @windowEl.style.zIndex = Whimdow::lastZIndex++
+    do @open
     @_mouseDragX = pageX - @windowEl.offsetLeft
     @_mouseDragY = pageY - @windowEl.offsetTop
     @isMoving = true
   
   _resizeStart: (e) ->
     do e.preventDefault
-    @windowEl.style.zIndex = Whimdow::lastZIndex++
+    do @open
     @isResizing = true
   
   _scrollStart: (e) ->
@@ -144,7 +158,6 @@ class Whimdow
     @isResizing = false
     @isScrolling = false
     @isHScrolling = false
-    clearTimeout @_autoScrollTO
     do @_updateScrollSlider
   
   _updateScrollSlider: ->

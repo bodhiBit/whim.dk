@@ -3,22 +3,33 @@ Whimdow = require "./Whimdow.coffee"
 
 ###
  main.coffee
- This script does nothing so far...
+ Startup script for whim.dk
 ###
-windows = []
+window.requestAnimationFrame ?= window.webkitRequestAnimationFrame
+
+windows = {}
 
 init = ->
   if window.innerWidth > 800
-    (document.querySelector "header").classList.add "docked"
-    (document.querySelector "nav").classList.add "docked"
-    (document.querySelector "footer").classList.add "docked"
-    time = 1000
-    for el in document.querySelectorAll "article"
-      time += -100
-      do (_el=el) ->
-        setTimeout ->
-          windows.push new Whimdow _el
-        , time
+    do initDesktop
+
+initDesktop = ->
+  (document.querySelector "header").classList.add "docked"
+  (document.querySelector "nav").classList.add "docked"
+  (document.querySelector "footer").classList.add "docked"
+  for el in document.querySelectorAll "article"
+    windows[el.id] = new Whimdow el
+  
+  window.addEventListener "hashchange", desktopHashChange
+  requestAnimationFrame desktopHashChange
+
+desktopHashChange = ->
+  name = location.hash.substr 1
+  if windows[name]
+    do windows[name].open
+  else
+    for name of windows
+      do windows[name].close
 
 if location.search isnt "?nojs"
   addEventListener "load", init
