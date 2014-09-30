@@ -1,3 +1,4 @@
+include _mixins
 doctype html
 html
   head
@@ -11,25 +12,15 @@ html
       p Geeky creativity
     nav
       ul
-        li(am-icon)
-          a(href="#about")
-            img(alt="icon", src="icons/about.png")
-            | About me
-        li(am-icon)
-          a(href="#projects")
-            img(alt="icon", src="icons/work.png")
-            | Projects
-        li(am-icon)
-          a(href="#tools")
-            img(alt="icon", src="icons/tools.png")
-            | Tools
-        li(am-icon)
-          a(href="#contact")
-            img(alt="icon", src="icons/contact.png")
-            | Contact me
+        +icon("About me", "#about", "about")
+        +icon("My work", "#work", "work")
+        +icon("Experience", "#xp", "tools")
+        +icon("Contact me", "#contact", "contact")
     main
       != yield
     footer
-      p
-        a(href="//validator.w3.org/check/referer") HTML5 valid
+      ul
+        +link("My GitHub","http://github.com/bodhiBit", "github")
+        +link("My Google+","https://plus.google.com/111778417532671763607/posts", "gplus")
+        +link("My LinkedIn","https://www.linkedin.com/pub/tommy-pedersen/93/12a/980", "linkedin")
     script(src="script.js")

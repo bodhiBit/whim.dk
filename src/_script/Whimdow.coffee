@@ -159,6 +159,7 @@ class Whimdow
   _dragEnd: (e) ->
     if @isResizing
       @contentEl.style.width = ""
+      @contentEl.style.height = ""
     @isMoving = false
     @isResizing = false
     @isScrolling = false
@@ -169,8 +170,13 @@ class Whimdow
     if not @contentEl.style.width
       scrollLeft = @viewportEl.scrollLeft
       @viewportEl.scrollLeft = 4096
-      @contentEl.style.width = (@contentEl.offsetWidth + @viewportEl.scrollLeft) + "px"
+      @contentEl.style.width = (@viewportEl.offsetWidth + @viewportEl.scrollLeft) + "px"
       @viewportEl.scrollLeft = scrollLeft
+    if not @contentEl.style.height
+      scrollTop = @viewportEl.scrollTop
+      @viewportEl.scrollTop = 40960
+      @contentEl.style.height = (@viewportEl.offsetHeight + @viewportEl.scrollTop) + "px"
+      @viewportEl.scrollTop = scrollTop
     @scrollSliderEl.style.height  = (Math.min 100, 100 * @viewportEl.offsetHeight / @contentEl.offsetHeight) + "%"
     @scrollSliderEl.style.top     = (Math.min 100, 100 * @viewportEl.scrollTop / @contentEl.offsetHeight) + "%"
     @hScrollSliderEl.style.width  = (Math.min 100, 100 * @viewportEl.offsetWidth / @contentEl.offsetWidth) + "%"

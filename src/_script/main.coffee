@@ -18,10 +18,10 @@ initDesktop = ->
   (document.querySelector "header").classList.add "docked"
   (document.querySelector "nav").classList.add "docked"
   (document.querySelector "footer").classList.add "docked"
-  for el in document.querySelectorAll "nav li"
-    new Whicon el
   for el in document.querySelectorAll "article"
     windows[el.id] = new Whimdow el
+  for el in document.querySelectorAll "[am-icon]"
+    new Whicon el
   
   window.addEventListener "hashchange", desktopHashChange
   requestAnimationFrame desktopHashChange

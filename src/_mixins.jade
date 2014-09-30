@@ -1,0 +1,7 @@
+mixin icon(label, link, icon, target)
+  li(am-icon)
+    a(href=link, target=target||'javascript:void(0)')
+      img(alt="icon", src="icons/#{icon || 'work'}.png", width="96")
+      = label
+mixin link(label, link, icon)
+  +icon(label, link, icon||"link", "_blank")
