@@ -19,9 +19,10 @@ x-whimdow
     display                     none
   
   [am-titlebar]
-    background-image            url("horizontal_line.png")
-    background-position         bottom
+    background-image            url("horizontal_line.png"), url("title_hilite.png")
+    background-position         bottom, top
     background-repeat           repeat-x
+    background-size             auto, cover
     cursor                      move
     font-size                   1.4em
     position                    absolute
@@ -33,17 +34,12 @@ x-whimdow
     height                      border_width * 1.5
     
     h1
-      /* background-image          url("title_hilite.png")
-      background-position       center
-      background-repeat         no-repeat
-      background-size           100% auto */
       display                   inline-block
       font-weight               bold
       overflow                  hidden
       text-overflow             ellipsis
       margin                    0
-      max-width                 70%
-      max-width                 calc( 100% - 128px )
+      width                     calc( 100% - 96px )
       white-space               nowrap
     
     button
@@ -96,9 +92,9 @@ x-whimdow
       right                     0
       
       [am-scrollslider]
-        background-image        url("horizontal_line.png"), url("vertical_line.png"), url("horizontal_line.png"), url("vertical_knob.png"), url("paper_texture.png")
-        background-position     top, left, bottom, center, center
-        background-repeat       repeat-x, repeat-y, repeat-x, no-repeat, repeat
+        background-image        url("vertical_knob.png"), url("horizontal_line.png"), url("vertical_line.png"), url("horizontal_line.png"), url("paper_texture.png")
+        background-position     center, top, left, bottom, center
+        background-repeat       no-repeat, repeat-x, repeat-y, repeat-x, repeat
         position                absolute
         
         left                    0
@@ -128,9 +124,9 @@ x-whimdow
       bottom                    0
       
       [am-scrollslider]
-        background-image        url("vertical_line.png"), url("horizontal_line.png"), url("vertical_line.png"), url("horizontal_knob.png"), url("paper_texture.png")
-        background-position     right, top, left, center, center
-        background-repeat       repeat-y, repeat-x, repeat-y, no-repeat, repeat
+        background-image        url("horizontal_knob.png"), url("vertical_line.png"), url("horizontal_line.png"), url("vertical_line.png"), url("paper_texture.png")
+        background-position     center, right, top, left, center
+        background-repeat       no-repeat, repeat-y, repeat-x, repeat-y, repeat
         position                absolute
         
         bottom                  0
