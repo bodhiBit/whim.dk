@@ -1,6 +1,6 @@
 mixin icon(label, link, icon, target)
   li(am-icon)
-    a(href=link, target=target||'javascript:void(0)')
+    a(href=link||'javascript:void(0)', target=target)
       img(alt="icon", src="icons/#{icon || 'work'}.png", width="96")
       = label
 mixin link(label, link, icon)

@@ -23,15 +23,16 @@ class Whicon
       @iconEl.style.position = "absolute"
     
     @iconEl.addEventListener "mousedown", @_moveStart.bind @
-    @iconEl.addEventListener "touchstart", @_moveStart.bind @
+    # @iconEl.addEventListener "touchstart", @_moveStart.bind @
     document.body.addEventListener "mousemove", @_drag.bind @
     document.body.addEventListener "touchmove", @_drag.bind @
-    @iconEl.addEventListener "mouseup", @_dragEnd.bind @
-    @iconEl.addEventListener "touchend", @_dragEnd.bind @
+    document.addEventListener "mouseup", @_dragEnd.bind @
+    document.addEventListener "touchend", @_dragEnd.bind @
     @linkEl.addEventListener "click", @click.bind @
   
   click: (e) ->
-    do e.preventDefault
+    if @isMoving
+      do e.preventDefault
   
   _moveStart: (e) ->
     pageX = e.pageX or e.changedTouches[0].pageX
@@ -46,6 +47,7 @@ class Whicon
   _drag: (e) ->
     pageX = e.pageX or e.changedTouches[0].pageX
     pageY = e.pageY or e.changedTouches[0].pageY
+    do e.preventDefault
     if @isMoving
       @noClick = true
       @iconEl.style.left = (pageX - @_mouseDragX) + "px"
@@ -54,11 +56,8 @@ class Whicon
   _dragEnd: (e) ->
     clearTimeout @_moveTO
     if @isMoving
-      @isMoving = false
-    else if @action
-      @action e
-    else
-      location.assign @linkEl.href
+      requestAnimationFrame =>
+        @isMoving = false
   
 
     
