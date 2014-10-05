@@ -7,9 +7,10 @@
   },
   "devDependencies": {
     "grunt": "*",
-    "grunt-harp": "*",
     "grunt-browserify": "*",
+    "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
+    "grunt-harp": "*",
     "coffeeify": "*"
   }
 }
