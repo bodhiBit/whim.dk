@@ -7,7 +7,7 @@ html
   background-color      #999
   background-image      url("dotmatrix_background.jpg")
   background-size       cover
-  background-position   right
+  background-position   left
   color                 #666
   font-family           "Waiting for the Sunrise", cursive
   letter-spacing        .1em
@@ -27,13 +27,37 @@ header, main > article
     text-decoration     underline
 
 header
+  background-image      url("raw_paper_texture.png")
+  box-shadow            0 0 16px 0 #0006
+  position              relative
   text-align            center
   
   h1
-    font-size           2em
+    font-size           .5em
+  
+  p
+    background-color    white
+    box-shadow          0 0 8px 0 #0003
+    font-family         "Courier New"
+    font-weight         bold
+    position            absolute
+    white-space         pre
+    
+    right               .2em
+    bottom              .2em
 
 h1, h2, p, ul, ol, table
   margin                .8em 1em
+
+code-tag
+  color                 #446fbd
+
+code-attr
+  color                 #6d8600
+
+code-val
+  color                 #e88501
+
 
 // Whimdows!
 

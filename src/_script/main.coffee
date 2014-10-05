@@ -1,6 +1,7 @@
 "use strict"
 Whimdow = require "./Whimdow.coffee"
 Whicon = require "./Whicon.coffee"
+Draggable = require "./Draggable.coffee"
 
 ###
  main.coffee
@@ -22,6 +23,8 @@ initDesktop = ->
     windows[el.id] = new Whimdow el
   for el in document.querySelectorAll "[am-icon]"
     new Whicon el
+  new Draggable document.querySelector "header"
+  new Draggable document.querySelector "header p"
   
   window.addEventListener "hashchange", desktopHashChange
   requestAnimationFrame desktopHashChange

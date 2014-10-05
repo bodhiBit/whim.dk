@@ -4,8 +4,28 @@
   Whimdow class
 ###
 class Whimdow
-  lastLeftPos: 198
-  lastTopPos: 32
+  Object.defineProperties @::,
+    width:
+      get: ->
+        @windowEl.offsetWidth +
+        (@windowEl.querySelector '[am-border="w"]').offsetWidth +
+        (@windowEl.querySelector '[am-border="e"]').offsetWidth
+      set: (width) ->
+        width += (@windowEl.querySelector '[am-border="w"]').offsetWidth
+        width += (@windowEl.querySelector '[am-border="e"]').offsetWidth
+        @windowEl.style.width = width + "px"
+    height:
+      get: ->
+        @windowEl.offsetHeight +
+        (@windowEl.querySelector '[am-border="n"]').offsetHeight +
+        (@windowEl.querySelector '[am-border="s"]').offsetHeight
+      set: (height) ->
+        height += (@windowEl.querySelector '[am-border="n"]').offsetHeight
+        height += (@windowEl.querySelector '[am-border="s"]').offsetHeight
+        @windowEl.style.height = height + "px"
+  
+  lastLeftPos: 400
+  lastTopPos: 48
   
   constructor: (@contentEl) ->
     @titleEl = @contentEl.querySelector "h1"
@@ -53,14 +73,22 @@ class Whimdow
     @hScrollShaftEl = @windowEl.querySelector '[am-scrollbar~="h"] [am-scrollshaft]'
     @hScrollSliderEl = @windowEl.querySelector '[am-scrollbar~="h"] [am-scrollslider]'
     
-    Whimdow::lastLeftPos += 32
-    Whimdow::lastTopPos += 48
-    @windowEl.style.left = Whimdow::lastLeftPos + "px"
-    @windowEl.style.top = Whimdow::lastTopPos + "px"
     angle = -1 + 3 * do Math.random
     @windowEl.style.webkitTransform = "rotate("+angle+"deg)"
     @windowEl.style.transform = "rotate("+angle+"deg)"
+    
     document.body.appendChild @windowEl
+    Whimdow::lastLeftPos += 32
+    Whimdow::lastTopPos += 48
+    if Whimdow::lastLeftPos + @width > window.innerWidth
+      Whimdow::lastLeftPos = 64
+      if Whimdow::lastTopPos < 220
+        Whimdow::lastTopPos = 220
+    if Whimdow::lastTopPos + @height > window.innerHeight
+      Whimdow::lastTopPos = 64
+    @windowEl.style.left = Whimdow::lastLeftPos + "px"
+    @windowEl.style.top = Whimdow::lastTopPos + "px"
+      
     
     @titlebarEl.addEventListener "mousedown", @_moveStart.bind @
     @titlebarEl.addEventListener "touchstart", @_moveStart.bind @
