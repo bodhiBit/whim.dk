@@ -4,12 +4,19 @@ header.docked
   width                         480px
 
 nav.docked
-  /* -webkit-column-width          114px
-  -moz-column-width             114px
-  column-width                  114px */
-  float                         right
-  width                         140px
+  position                      absolute
+  right                         1em
+  width                         0
   height                        100%
+  
+  ul
+    align-content               flex-start
+    display                     flex
+    flex-direction              column
+    flex-wrap                   wrap-reverse
+    float                       right
+    margin                      0
+    height                      100%
 
 footer.docked
   position                      absolute
