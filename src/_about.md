@@ -1,6 +1,8 @@
 About me
 ========
-This is a _text_ about me...
+<aside>
+![My self](images/self_portrait.png)
+</aside>
 
 Suspendisse sit amet dui velit. Maecenas eu metus maximus, luctus mauris id, sagittis massa. Aliquam erat volutpat. Suspendisse consectetur, orci id blandit interdum, tortor mauris congue arcu, ac varius urna lacus non sem. Pellentesque neque lacus, dapibus eget purus vel, laoreet tempor lectus. Vivamus tincidunt, purus ac pharetra commodo, elit nibh tempor ipsum, faucibus eleifend ipsum risus a lacus. Pellentesque at magna metus. Ut sed felis vel leo condimentum finibus sit amet at dolor. Nulla finibus, enim a mattis maximus, leo nisl interdum est, quis mollis leo ante eu dui. Fusce id varius sapien. Integer in ex neque. Ut in aliquam urna, sed tristique velit. Aenean vel erat ornare, faucibus diam in, auctor nisi.
 
