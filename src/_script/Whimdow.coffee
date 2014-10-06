@@ -24,7 +24,7 @@ class Whimdow
         height += (@windowEl.querySelector '[am-border="s"]').offsetHeight
         @windowEl.style.height = height + "px"
   
-  lastLeftPos: 400
+  lastLeftPos: 360
   lastTopPos: 48
   
   constructor: (@contentEl) ->
@@ -82,8 +82,8 @@ class Whimdow
     Whimdow::lastTopPos += 48
     if Whimdow::lastLeftPos + @width > window.innerWidth
       Whimdow::lastLeftPos = 64
-      if Whimdow::lastTopPos < 220
-        Whimdow::lastTopPos = 220
+      if Whimdow::lastTopPos < 192
+        Whimdow::lastTopPos = 192
     if Whimdow::lastTopPos + @height > window.innerHeight
       Whimdow::lastTopPos = 64
     @windowEl.style.left = Whimdow::lastLeftPos + "px"

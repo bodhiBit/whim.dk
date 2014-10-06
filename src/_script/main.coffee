@@ -23,7 +23,7 @@ initDesktop = ->
     windows[el.id] = new Whimdow el
   for el in document.querySelectorAll "[am-icon]"
     new Whicon el
-  new Draggable document.querySelector "header"
+  new Draggable document.querySelector "header img"
   new Draggable document.querySelector "header p"
   
   window.addEventListener "hashchange", desktopHashChange
