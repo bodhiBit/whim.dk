@@ -1,7 +1,15 @@
-mixin icon(label, link, icon, target)
+mixin icon(label, link, icon, target, tooltip)
   li(am-icon)
-    a(href=link||'javascript:void(0)', target=target)
+    a(href=link||'javascript:void(0)', target=target, title=tooltip)
       img(alt="icon", src="icons/#{icon || 'work'}.png", width="96")
       = label
-mixin link(label, link, icon)
-  +icon(label, link, icon||"link", "_blank")
+mixin link(label, link, icon, tooltip)
+  +icon(label, link, icon||"link", "_blank", tooltip)
+
+mixin projectFolder(title, tag)
+  section(id=tag+"-projects")
+    h1= title
+    ul
+      for p in projects
+        if p.tags.indexOf(tag) > -1
+          +link(p.title, p.url, "screenshots/96xp/"+p.screenshot, p.description)

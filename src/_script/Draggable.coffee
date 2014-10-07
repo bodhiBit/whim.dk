@@ -37,6 +37,7 @@ class Draggable
     @_mouseDragX = pageX - @mainEl.offsetLeft
     @_mouseDragY = pageY - @mainEl.offsetTop
     @_moveTO = setTimeout =>
+      @mainEl.parentNode.appendChild @mainEl
       @isMoving = true
     , 250
   

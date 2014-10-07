@@ -1,13 +1,81 @@
 {
   "title": "whim.dk",
   "index": {
-    "ponies": [
-      "Twilight",
-      "Pinkie",
-      "Applejack",
-      "Rarity",
-      "Fluttershy",
-      "Rainbow Dash"
+    "projectTags": [
+      {
+        "title": "School projects",
+        "tag": "school"
+      },
+      {
+        "title": "Games",
+        "tag": "game"
+      },
+      {
+        "title": "Apps",
+        "tag": "app"
+      },
+      {
+        "title": "Old stuff",
+        "tag": "old"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Street Art Copenhagen",
+        "url": "//streetart.whim.dk/",
+        "screenshot": "streetart",
+        "description": "Mini-projekt om street-art.",
+        "tags": [ "school" ]
+      },
+      {
+        "title": "Matilde Sport",
+        "url": "//matildesport.whim.dk/",
+        "screenshot": "matildesport",
+        "description": "Gamification projekt for Matilde Sport.",
+        "tags": [ "school", "game" ]
+      },
+      {
+        "title": "SmagSilkeborg",
+        "url": "//smagsilkeborg.whim.dk/",
+        "screenshot": "smagsilkeborg",
+        "description": "Mobile-first-løsning til foreningen SmagSilkeborg.",
+        "tags": [ "school" ]
+      },
+      {
+        "title": "Jul i Den Gamle By",
+        "url": "//julidengamleby.whim.dk/",
+        "screenshot": "julidengamleby",
+        "description": "Kampagneside for Den Gamle By's jule-arrangement.",
+        "tags": [ "school" ]
+      },
+      {
+        "title": "Space rocks... In space..!!",
+        "url": "//demo.whim.dk/code/spacerocks_in_space/",
+        "screenshot": "spacerocks_in_space",
+        "description": "Sejt asteroide-spil, der kan styres med piletaster, touch og gamepad.",
+        "tags": [ "game" ]
+      },
+      {
+        "title": "platformer",
+        "url": "//demo.whim.dk/code/platformer.coffee/",
+        "screenshot": "platformer",
+        "description": "Et simpelt lille platformspil kodet i CoffeeScript og gør brug af canvas.",
+        "tags": [ "game" ]
+      },
+      {
+        "title": "particles",
+        "url": "//demo.whim.dk/code/particles/",
+        "screenshot": "particles",
+        "description": "En flot fyrværkeri-agtig partikelbrønd, som gør brug af canvas.",
+        "tags": [ "game", "app" ]
+      },
+      {
+        "title": "cirkelspil",
+        "url": "//demo.whim.dk/code/cirkelSpil/",
+        "screenshot": "cirkelSpil",
+        "description": "Simpelt lille spil hvor man skal klikke på cirkler.",
+        "tags": [ "game" ]
+      }
     ]
   }
 }

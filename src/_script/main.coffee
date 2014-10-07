@@ -19,10 +19,11 @@ initDesktop = ->
   (document.querySelector "header").classList.add "docked"
   (document.querySelector "nav").classList.add "docked"
   (document.querySelector "footer").classList.add "docked"
-  for el in document.querySelectorAll "article"
-    windows[el.id] = new Whimdow el
   for el in document.querySelectorAll "[am-icon]"
     new Whicon el
+    href = (el.querySelector "a").getAttribute "href"
+    if "#" is href.substr 0, 1
+      windows[href.substr 1] = new Whimdow document.querySelector href
   new Draggable document.querySelector "header img"
   new Draggable document.querySelector "header p"
   

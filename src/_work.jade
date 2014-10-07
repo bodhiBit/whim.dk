@@ -1,16 +1,7 @@
+include _mixins
 h1 My projects
-table
-  for v, n in ponies
-    tr
-      th= n
-      td= v
-section#school-projects
-  h2 School projects
-  p
-    img(src="http://fc09.deviantart.net/fs71/f/2014/265/7/9/daily_paint__672__nyan_cat_by_cryptid_creations-d806rxn.png")
-section#game-projects
-  h2 Games
-section#app-projects
-  h2 Apps
-section#old-projects
-  h2 Old stuff
+ul
+  for t in projectTags
+    +icon(t.title, "#"+t.tag+"-projects")
+for t in projectTags
+  +projectFolder(t.title, t.tag)

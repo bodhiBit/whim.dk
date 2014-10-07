@@ -130,6 +130,18 @@ class Whimdow
     scrollTop = @viewportEl.scrollTop
     scrollLeft = @viewportEl.scrollLeft
     document.body.appendChild @windowEl
+    if not @_openedBefore
+      @_openedBefore = true
+      @contentEl.style.width = ""
+      @contentEl.style.height = ""
+      @viewportEl.scrollTop = 4096
+      if @viewportEl.scrollTop is 0
+        @windowEl.style.width = (@windowEl.offsetWidth / 2) + "px"
+        @windowEl.style.height = "80px"
+        @viewportEl.scrollLeft = 4096
+        @viewportEl.scrollTop = 4096
+        @windowEl.style.width = (@windowEl.offsetWidth + @viewportEl.scrollLeft) + "px"
+        @windowEl.style.height = (@windowEl.offsetHeight + @viewportEl.scrollTop) + "px"
     @viewportEl.scrollTop = scrollTop
     @viewportEl.scrollLeft = scrollLeft
     requestAnimationFrame @_updateScrollSlider.bind @
