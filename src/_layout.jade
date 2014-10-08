@@ -1,4 +1,3 @@
-include _mixins
 doctype html
 html
   head
@@ -9,19 +8,7 @@ html
   body
     header#top
       h1
-        img(alt="whim - code is art", src="images/banner.png", width="320")
+        img(alt="whim", src="images/banner.png", width="320")
       p <code-tag>&lt;code</code-tag> <code-attr>is</code-attr>=<code-val>&quot;art&quot;</code-val><code-tag>/&gt;</code-tag>
-    nav
-      ul
-        +icon("About me", "#about", "about")
-        +icon("My work", "#work", "work")
-        +icon("Experience", "#xp", "tools")
-        +icon("Contact me", "#contact", "contact")
-    main
-      != yield
-    footer
-      ul
-        +link("My GitHub","http://github.com/bodhiBit", "github")
-        +link("My Google+","https://plus.google.com/111778417532671763607/posts", "gplus")
-        +link("My LinkedIn","https://www.linkedin.com/pub/tommy-pedersen/93/12a/980", "linkedin")
+    != yield
     script(src="script.js")

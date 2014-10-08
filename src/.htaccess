@@ -3,3 +3,9 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule .* resize.php
 
+DirectoryIndex index
+Options +MultiViews
+AddLanguage da .da
+AddLanguage en .en
+LanguagePriority en da
+ForceLanguagePriority Fallback

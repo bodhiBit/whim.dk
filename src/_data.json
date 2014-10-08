@@ -1,20 +1,69 @@
 {
-  "title": "whim.dk",
   "index": {
+    "nav": [
+      {
+        "da_label": "Om mig",
+        "label": "About me",
+        "link":  "#about",
+        "icon":  "about"
+      },
+      {
+        "da_label": "Mine værker",
+        "label": "My work",
+        "link":  "#work",
+        "icon":  "work"
+      },
+      {
+        "da_label": "Erfaring",
+        "label": "Experience",
+        "link":  "#xp",
+        "icon":  "tools"
+      },
+      {
+        "da_label": "Kontakt mig",
+        "label": "Contact me",
+        "link":  "#contact",
+        "icon":  "contact"
+      }
+    ],
+    "footer": [
+      {
+        "da_label": "Min Github",
+        "label": "My Github",
+        "link":  "http://github.com/bodhiBit",
+        "icon":  "github"
+      },
+      {
+        "da_label": "Min Google+",
+        "label": "My Google+",
+        "link":  "https://plus.google.com/111778417532671763607/posts",
+        "icon":  "gplus"
+      },
+      {
+        "da_label": "Min LinkedIn",
+        "label": "My LinkedIn",
+        "link":  "https://www.linkedin.com/pub/tommy-pedersen/93/12a/980",
+        "icon":  "linkedin"
+      }
+    ],
     "projectTags": [
       {
+        "da_title": "Skole projekter",
         "title": "School projects",
         "tag": "school"
       },
       {
+        "da_title": "Spil",
         "title": "Games",
         "tag": "game"
       },
       {
+        "da_title": "Apps",
         "title": "Apps",
         "tag": "app"
       },
       {
+        "da_title": "Gamle sager",
         "title": "Old stuff",
         "tag": "old"
       }
@@ -24,56 +73,56 @@
         "title": "Street Art Copenhagen",
         "url": "//streetart.whim.dk/",
         "screenshot": "streetart",
-        "description": "Mini-projekt om street-art.",
+        "da_description": "Mini-projekt om street-art.",
+        "description": "Mini-projekt about street-art.",
         "tags": [ "school" ]
-      },
-      {
-        "title": "Matilde Sport",
-        "url": "//matildesport.whim.dk/",
-        "screenshot": "matildesport",
-        "description": "Gamification projekt for Matilde Sport.",
-        "tags": [ "school", "game" ]
       },
       {
         "title": "SmagSilkeborg",
         "url": "//smagsilkeborg.whim.dk/",
         "screenshot": "smagsilkeborg",
-        "description": "Mobile-first-løsning til foreningen SmagSilkeborg.",
+        "da_description": "Mobile-first-løsning til foreningen SmagSilkeborg.",
+        "description": "Mobile-first-solution for the union SmagSilkeborg.",
         "tags": [ "school" ]
       },
       {
         "title": "Jul i Den Gamle By",
         "url": "//julidengamleby.whim.dk/",
         "screenshot": "julidengamleby",
-        "description": "Kampagneside for Den Gamle By's jule-arrangement.",
+        "da_description": "Kampagneside for Den Gamle By's jule-arrangement.",
+        "description": "Campaign site for Den Gamle By's christmas event.",
         "tags": [ "school" ]
       },
       {
         "title": "Space rocks... In space..!!",
         "url": "//demo.whim.dk/code/spacerocks_in_space/",
         "screenshot": "spacerocks_in_space",
-        "description": "Sejt asteroide-spil, der kan styres med piletaster, touch og gamepad.",
+        "da_description": "Sejt asteroide-spil, der kan styres med piletaster, touch og gamepad.",
+        "description": "Cool asteroid game, controllable with arrow keys, touch and gamepad.",
         "tags": [ "game" ]
       },
       {
         "title": "platformer",
         "url": "//demo.whim.dk/code/platformer.coffee/",
         "screenshot": "platformer",
-        "description": "Et simpelt lille platformspil kodet i CoffeeScript og gør brug af canvas.",
+        "da_description": "Et simpelt lille platformspil kodet i CoffeeScript og gør brug af canvas.",
+        "description": "A simple little platform game coded in CoffeeScript and makes use of canvas.",
         "tags": [ "game" ]
       },
       {
         "title": "particles",
         "url": "//demo.whim.dk/code/particles/",
         "screenshot": "particles",
-        "description": "En flot fyrværkeri-agtig partikelbrønd, som gør brug af canvas.",
+        "da_description": "En flot fyrværkeri-agtig partikelbrønd, som gør brug af canvas.",
+        "description": "A pretty firework-ish particle fountain that makes use of canvas.",
         "tags": [ "game", "app" ]
       },
       {
         "title": "cirkelspil",
         "url": "//demo.whim.dk/code/cirkelSpil/",
         "screenshot": "cirkelSpil",
-        "description": "Simpelt lille spil hvor man skal klikke på cirkler.",
+        "da_description": "Simpelt lille spil hvor man skal klikke på cirkler.",
+        "description": "A simple little game where you click on circles.",
         "tags": [ "game" ]
       }
     ]

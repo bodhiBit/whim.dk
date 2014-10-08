@@ -1,0 +1,26 @@
+include _mixins
+- var lang = "en"
+nav
+  ul
+    for n in nav
+      +icon(n.label, n.link, n.icon)
+main
+  article#about
+    include ./_about.md
+  article#work
+    h1 My work
+    ul
+      for t in projectTags
+        +icon(t.title, "#"+t.tag+"-projects", "work")
+    for t in projectTags
+      +projectFolder(t.title, t.tag)
+  article#xp
+    h1 My arsenal of web experience
+    include ./_xp
+  article#contact
+    h1 Shoot me a message
+    include ./_contact
+footer
+  ul
+    for n in footer
+      +link(n.label, n.link, n.icon)
