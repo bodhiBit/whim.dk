@@ -3,6 +3,10 @@
   # $width = intval($_GET["width"]);
   # $height = intval($_GET["height"]);
   $url = substr(".".$_SERVER["REQUEST_URI"], strlen(dirname(".".$_SERVER["PHP_SELF"])));
+  if (substr($_SERVER["HTTP_REFERER"], -12) === "?quickresize") {
+    header("Location: http://whim.dk".$url);
+    die("Redirecting to production");
+  }
   if (
     strtolower(substr($url, -4)) !== ".jpg" &&
     strtolower(substr($url, -5)) !== ".jpeg" &&
