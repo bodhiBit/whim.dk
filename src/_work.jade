@@ -2,6 +2,6 @@ include _mixins
 h1 My projects
 ul
   for t in projectTags
-    +icon(t.title, "#"+t.tag+"-projects")
+    +icon(t.title, "#"+t.tag+"-projects", "work")
 for t in projectTags
   +projectFolder(t.title, t.tag)

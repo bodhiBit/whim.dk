@@ -1,7 +1,9 @@
 mixin icon(label, link, icon, target, tooltip)
-  li(am-icon)
+  - var t = icon.indexOf("screenshots/") === -1 ? "" : "big";
+  - var w = t === "big" ? 160 : 96;
+  li(am-icon=t)
     a(href=link||'javascript:void(0)', target=target, title=tooltip)
-      img(alt="icon", src="icons/#{icon || 'work'}.png", width="96")
+      img(alt="icon", src="icons/#{icon || 'work'}.png", width=w)
       = label
 mixin link(label, link, icon, tooltip)
   +icon(label, link, icon||"link", "_blank", tooltip)
@@ -12,4 +14,4 @@ mixin projectFolder(title, tag)
     ul
       for p in projects
         if p.tags.indexOf(tag) > -1
-          +link(p.title, p.url, "screenshots/96xp/"+p.screenshot, p.description)
+          +link(p.title, p.url, "screenshots/160xp/"+p.screenshot, p.description)

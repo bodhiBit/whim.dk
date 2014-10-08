@@ -20,8 +20,11 @@ initDesktop = ->
   (document.querySelector "nav").classList.add "docked"
   (document.querySelector "footer").classList.add "docked"
   for el in document.querySelectorAll "[am-icon]"
-    new Whicon el
     href = (el.querySelector "a").getAttribute "href"
+    new Whicon el, do (hash=href) ->
+      ->
+        if hash is location.hash
+          do desktopHashChange
     if "#" is href.substr 0, 1
       windows[href.substr 1] = new Whimdow document.querySelector href
   new Draggable document.querySelector "header img"
