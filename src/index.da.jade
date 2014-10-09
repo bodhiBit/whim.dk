@@ -8,17 +8,17 @@ main
   article#about
     include ./_about-da.md
   article#work
-    h1 Mine værker
+    h2 Mine værker
     ul
       for t in projectTags
         +icon(t.da_title, "#"+t.tag+"-projects", "work")
     for t in projectTags
       +projectFolder(t.da_title, t.tag)
   article#xp
-    h1 Mit arsenal af web erfaring
+    h2 Mit arsenal af web erfaring
     include ./_xp
   article#contact
-    h1 Send en besked til mig
+    h2 Send en besked til mig
     include ./_contact
 footer
   ul

@@ -31,7 +31,7 @@
   </head>
   <body>
     <article>
-      <h1><?=$header?></h1>
+      <h2><?=$header?></h2>
       <p><?=$message?></p>
       <script> document.write('<a href="javascript:history.back()">&larr;Go back</a>'); </script>
     </article>

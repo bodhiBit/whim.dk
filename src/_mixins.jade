@@ -10,7 +10,7 @@ mixin link(label, link, icon, tooltip)
 
 mixin projectFolder(title, tag, danish)
   section(id=tag+"-projects")
-    h1= title
+    h2= title
     ul
       for p in projects
         - description = lang === "da" ? p.da_description : p.description

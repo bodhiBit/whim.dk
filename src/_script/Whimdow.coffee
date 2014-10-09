@@ -28,7 +28,7 @@ class Whimdow
   lastTopPos: 48
   
   constructor: (@contentEl, open) ->
-    @titleEl = @contentEl.querySelector "h1"
+    @titleEl = @contentEl.querySelector "h2"
     
     @windowEl = document.createElement "x-whimdow"
     @windowEl.innerHTML = """
@@ -42,7 +42,7 @@ class Whimdow
       <div am-border="s e"></div>
       <div am-titlebar>
         <button am-widget="menu icon"></button>
-        <h1>Untitled</h1>
+        <h2>Untitled</h2>
         <button am-widget="close"></button>
       </div>
       <div am-viewport>
@@ -64,7 +64,7 @@ class Whimdow
       </div>
     """
     @titlebarEl = @windowEl.querySelector "[am-titlebar]"
-    @titlebarEl.replaceChild @titleEl, @titlebarEl.querySelector "h1"
+    @titlebarEl.replaceChild @titleEl, @titlebarEl.querySelector "h2"
     @viewportEl = @windowEl.querySelector "[am-viewport]"
     @viewportEl.replaceChild @contentEl, @viewportEl.querySelector "article"
     @resizeEl = @windowEl.querySelector '[am-border="s e"]'

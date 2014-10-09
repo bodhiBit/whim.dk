@@ -1,5 +1,5 @@
 About me
-========
+--------
 <aside>
 ![My self](images/160xp/self_portrait.png)
 </aside>

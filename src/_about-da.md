@@ -1,5 +1,5 @@
 Om mig
-======
+------
 <aside>
 ![Mig selv](images/160xp/self_portrait.png)
 </aside>
