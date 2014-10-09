@@ -27,7 +27,7 @@ class Whimdow
   lastLeftPos: 360
   lastTopPos: 48
   
-  constructor: (@contentEl) ->
+  constructor: (@contentEl, open) ->
     @titleEl = @contentEl.querySelector "h1"
     
     @windowEl = document.createElement "x-whimdow"
@@ -122,7 +122,10 @@ class Whimdow
     (@windowEl.querySelector '[am-widget="close"]').addEventListener "touchend", @close.bind @
     
     requestAnimationFrame @_updateScrollSlider.bind @
-    requestAnimationFrame @close.bind @
+    if open
+      requestAnimationFrame @open.bind @
+    else
+      requestAnimationFrame @close.bind @
   
   open: ->
     @windowEl.classList.remove "closed"

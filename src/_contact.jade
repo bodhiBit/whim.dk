@@ -1,2 +1,19 @@
-h1 Contact me
-p You can contact me and stuff
+- c = lang === "da" ? da_contact : contact;
+form(method="post", action="mail")
+  table
+    tr
+      th: label(for="nameInp")= c.name+": "
+      td: input(type="text", name="name", id="nameInp", required)
+    tr
+      th: label(for="emailInp")= c.email+": "
+      td: input(type="email", name="email", id="emailInp", required)
+    tr
+      th: label(for="subjectInp")= c.subject+": "
+      td: input(type="text", name="subject", id="subjectInp", required)
+    // tr
+    //   th(colspan=2): label(for="messageInp")= c.message+": "
+    tr
+      td(colspan=2): textarea(name="message", id="messageInp", required)
+    tr
+      th
+      td: input(type="submit", value=c.send)

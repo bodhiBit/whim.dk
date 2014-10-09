@@ -1,0 +1,40 @@
+table, tbody
+  display               block
+
+tr
+  display               flex
+
+th, td
+  display               block
+  text-align            left
+
+th
+  width                 6em
+
+td
+  flex-grow             2
+
+form
+  input, textarea
+    background-color    transparent
+    background-image    url("horizontal_line.png")
+    background-position bottom, left, top, right
+    background-repeat   repeat-x, repeat-y
+    border-width        0
+    font-family         inherit
+    width               100%
+  
+  input[type="submit"], textarea
+    background-image    url("horizontal_line.png"), url("vertical_line.png"), url("horizontal_line.png"), url("vertical_line.png")
+  
+  textarea
+    height              8em
+  
+  input[type="submit"]
+    background-image    url("horizontal_line.png"), url("vertical_line.png"), url("horizontal_line.png"), url("vertical_line.png"), url("raw_paper_texture.png")
+    float               right
+    font-weight         bold
+    width               50%
+    
+    &:disabled
+      background-image  url("horizontal_line.png"), url("vertical_line.png"), url("horizontal_line.png"), url("vertical_line.png"), url("horizontal_shaft.png"), url("raw_paper_texture.png")

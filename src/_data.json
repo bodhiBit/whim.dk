@@ -125,6 +125,20 @@
         "description": "A simple little game where you click on circles.",
         "tags": [ "game" ]
       }
-    ]
+    ],
+    "da_contact": {
+      "name": "Dit navn",
+      "email": "Din e-mail",
+      "subject": "Emne",
+      "message": "Besked",
+      "send": "Send!"
+    },
+    "contact": {
+      "name": "Your name",
+      "email": "Your e-mail",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send!"
+    }
   }
 }
