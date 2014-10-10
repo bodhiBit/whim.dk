@@ -15,4 +15,4 @@ mixin projectFolder(title, tag, danish)
       for p in projects
         - description = lang === "da" ? p.da_description : p.description
         if p.tags.indexOf(tag) > -1
-          +link(p.title, p.url, "screenshots/160xp/"+p.screenshot, description)
+          +link(p.title, p.url, "screenshots/160x120p/"+p.screenshot, description)

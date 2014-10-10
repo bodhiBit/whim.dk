@@ -63,6 +63,11 @@
         "tag": "app"
       },
       {
+        "da_title": "For sjov",
+        "title": "For fun",
+        "tag": "fun"
+      },
+      {
         "da_title": "Gamle sager",
         "title": "Old stuff",
         "tag": "old"
@@ -70,27 +75,43 @@
     ],
     "projects": [
       {
+        "title": "Todo",
+        "url": "//hotfox.whim.dk/todo/",
+        "screenshot": "todo",
+        "da_description": "Todo-liste app som virker offline, kan synkronisere med flere enheder uden login og kan installeres via Firefox.",
+        "description": "Todo-list app that works offline, syncronizes with multiple devices without login and is installable via Firefox.",
+        "tags": [ "app" ]
+      },
+      {
+        "title": "lores",
+        "url": "//demo.whim.dk/code/lores/",
+        "screenshot": "lores",
+        "da_description": "En eksperimentiel app som konverterer ethvert billede til noget der ligner et skærmbillede fra et gammelt computer-system. Komplet med dithering algoritmer og emulering af attribute clashing.",
+        "description": "An experimental app that converts any picture to something that resembles a screen dump from an old computer system. Complete with dithering algorithms and attribute clashing.",
+        "tags": [ "fun", "app" ]
+      },
+      {
         "title": "Street Art Copenhagen",
         "url": "//streetart.whim.dk/",
         "screenshot": "streetart",
-        "da_description": "Mini-projekt om street-art.",
-        "description": "Mini-projekt about street-art.",
+        "da_description": "Mini-projekt om street-art. Henter relevante billeder fra Instagram.",
+        "description": "Mini-projekt about street-art. Fetches relevant pictures from Instagram.",
         "tags": [ "school" ]
       },
       {
         "title": "SmagSilkeborg",
         "url": "//smagsilkeborg.whim.dk/",
         "screenshot": "smagsilkeborg",
-        "da_description": "Mobile-first-løsning til foreningen SmagSilkeborg.",
-        "description": "Mobile-first-solution for the union SmagSilkeborg.",
-        "tags": [ "school" ]
+        "da_description": "Mobile-first-løsning til foreningen SmagSilkeborg. Gør brug af geo-location til at finde de nærmeste medlemmer.",
+        "description": "Mobile-first-solution for the union SmagSilkeborg. Makes use of geo-location for finding nearest members.",
+        "tags": [ "school", "app" ]
       },
       {
         "title": "Jul i Den Gamle By",
         "url": "//julidengamleby.whim.dk/",
         "screenshot": "julidengamleby",
-        "da_description": "Kampagneside for Den Gamle By's jule-arrangement.",
-        "description": "Campaign site for Den Gamle By's christmas event.",
+        "da_description": "Kampagneside for Den Gamle By's jule-arrangement. Komplet med dalende jule-sne!",
+        "description": "Campaign site for Den Gamle By's christmas event. Complete with falling christmas-snow!",
         "tags": [ "school" ]
       },
       {
@@ -99,7 +120,7 @@
         "screenshot": "spacerocks_in_space",
         "da_description": "Sejt asteroide-spil, der kan styres med piletaster, touch og gamepad.",
         "description": "Cool asteroid game, controllable with arrow keys, touch and gamepad.",
-        "tags": [ "game" ]
+        "tags": [ "game", "fun" ]
       },
       {
         "title": "platformer",
@@ -107,7 +128,7 @@
         "screenshot": "platformer",
         "da_description": "Et simpelt lille platformspil kodet i CoffeeScript og gør brug af canvas.",
         "description": "A simple little platform game coded in CoffeeScript and makes use of canvas.",
-        "tags": [ "game" ]
+        "tags": [ "game", "fun" ]
       },
       {
         "title": "particles",
@@ -115,7 +136,7 @@
         "screenshot": "particles",
         "da_description": "En flot fyrværkeri-agtig partikelbrønd, som gør brug af canvas.",
         "description": "A pretty firework-ish particle fountain that makes use of canvas.",
-        "tags": [ "game", "app" ]
+        "tags": [ "fun" ]
       },
       {
         "title": "cirkelspil",
@@ -123,7 +144,55 @@
         "screenshot": "cirkelSpil",
         "da_description": "Simpelt lille spil hvor man skal klikke på cirkler.",
         "description": "A simple little game where you click on circles.",
-        "tags": [ "game" ]
+        "tags": [ "game", "fun" ]
+      },
+      {
+        "title": "rain",
+        "url": "//rain.inwebl.com/",
+        "screenshot": "rain",
+        "da_description": "Brainstorming app.",
+        "description": "Brainstorming app.",
+        "tags": [ "old", "app" ]
+      },
+      {
+        "title": "TurboSweeper",
+        "url": "//demo.whim.dk/old/TurboSweeper/",
+        "screenshot": "turbosweeper",
+        "da_description": "Minestryger med autopilot. Kodet i Java kompileret til JavaScript med GWT.",
+        "description": "Mine sweetper with auto pilot. Coded in Java compiled to JavaScript with GWT.",
+        "tags": [ "old", "game", "fun" ]
+      },
+      {
+        "title": "Matrix",
+        "url": "//demo.whim.dk/old/matrix.html",
+        "screenshot": "matrix",
+        "da_description": "Kode-regn af japanske tegn i ægte Matrix-stil.",
+        "description": "Rain of japaneese characters, Matrix style.",
+        "tags": [ "old", "fun" ]
+      },
+      {
+        "title": "Star Rain",
+        "url": "//demo.whim.dk/old/starrain.html",
+        "screenshot": "starrain",
+        "da_description": "Mit første forsøg med canvas. En regn af stjerner.",
+        "description": "My first attempt at canvas. A rain of stars.",
+        "tags": [ "old", "fun" ]
+      },
+      {
+        "title": "DWIB",
+        "url": "//demo.whim.dk/old/dwib/",
+        "screenshot": "dwib",
+        "da_description": "Mit første forsøg med Ajax og DHTML. Et lille OS, der kører i browseren.",
+        "description": "My first attempt at Ajax and DHTML. A little OS inside the browser.",
+        "tags": [ "old", "app" ]
+      },
+      {
+        "title": "Puzzle Game",
+        "url": "//demo.whim.dk/old/puzzle/",
+        "screenshot": "puzzle",
+        "da_description": "Et gammelt DHTML puslespil.",
+        "description": "An old DHTML puzzle game.",
+        "tags": [ "old", "game" ]
       }
     ],
     "da_contact": {
