@@ -1,5 +1,11 @@
 include _mixins
 - var lang = "en"
+| <!--[if lt IE 9]>
+center
+  img(src="images/ierotate.gif")
+  marquee(bgcolor="black", width=640): font(color="yellow", size=6) The stylesheet for this website is way too awesome for Internet Explorer to comprehend and has thus been disabled to protect its feelings. This marquee will keep it distracted while you <a href="//mozilla.org/firefox">download Firefox</a>.
+  img(src="images/ierotate.gif")
+| <![endif]-->
 nav
   ul
     for n in nav

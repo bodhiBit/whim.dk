@@ -1,5 +1,11 @@
 include _mixins
 - var lang = "da"
+| <!--[if lt IE 9]>
+center
+  img(src="images/ierotate.gif")
+  marquee(bgcolor="black", width=640): font(color="yellow", size=6) Denne hjemmesides CSS-fil er alt for fantastisk for Internet Explorer at fatte og er derfor slået fra for ikke at såre dens følelser. Denne marquee vil aflede dens opmærksomhed imens du <a href="//mozilla.org/firefox">downloader Firefox</a>.
+  img(src="images/ierotate.gif")
+| <![endif]-->
 nav
   ul
     for n in nav
