@@ -11,3 +11,9 @@ Although I have experience with a fair amount of programming languages, it is pr
 I have chosen to read multimedia design with the expectation of learning how to become better at design and use my skills and experience to create beautiful web pages that users are happy to use.
 
 I like to collaborate on a project that everyone in the group is passionate about and where you know and respect each other's strengths and weaknesses. Maybe I'm not the most social type, but on the other hand I'm good at solving technical problems, provide ideas and help others.
+
+Education
+---------
+ - **Multimedie design at Business Academy Aarhus:** _august 2013 - june 2015._ Education in advertising, IT, media, graphical design, online marketing, digital communikation and interface design.
+ - **Computer Science at Business Academy Aarhus:** _august 2012 - june 2013._ Education in software design and programming.
+ - **Web integration at Odense Tekniske Skole:** _may 2005 - november 2006._ Education in developing websites including graphics and media. Configuring web servers (Apache and IIS). Coding PHP, HTML, Flash, JavaScript and CSS. Photoshop and photography.

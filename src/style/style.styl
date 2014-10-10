@@ -50,6 +50,23 @@ header
 h1, h2, p, ul, ol, table, aside
   margin                .8em 1em
 
+h2
+  font-size             1.2em
+
+strong
+  font-weight           bold
+  text-decoration       underline
+
+li
+  margin-left           2em
+
+  &::before
+    content             " - "
+    display             block
+    float               left
+    margin-left         -1.2em
+    position            relative
+
 aside
   float                 right
 
