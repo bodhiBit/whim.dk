@@ -16,9 +16,7 @@ init = ->
     do initDesktop
 
 initDesktop = ->
-  (document.querySelector "header").classList.add "docked"
-  (document.querySelector "nav").classList.add "docked"
-  (document.querySelector "footer").classList.add "docked"
+  document.body.classList.add "desktop"
   for el in document.querySelectorAll "[am-icon]"
     href = (el.querySelector "a").getAttribute "href"
     new Whicon el, do (hash=href) ->
