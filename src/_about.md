@@ -10,7 +10,7 @@ Although I have experience with a fair amount of programming languages, it is pr
 
 I like to collaborate on a project that everyone in the group is passionate about and where you know and respect each other's strengths and weaknesses. I might not be the most social type, but on the other hand I'm good at solving technical problems, provide ideas and help others.
 
-I consider code as an artform more than just a craft; more a paintbrush than a hammer. Code (especially web-kode) is a means for expressing ideas, feelings, thoughts, experiences etc. not only in the product, but also in the code itself. It's a living substance to be treated with care and in return it will help you get your message out in the world! :)
+I consider code as an artform more than just a craft; more a paintbrush than a hammer. Code (especially web code) is a means for expressing ideas, feelings, thoughts, experiences etc. not only in the product, but also in the code itself. It's a living substance to be treated with care and in return it will help you get your message out in the world! :)
 
 Education
 ---------
