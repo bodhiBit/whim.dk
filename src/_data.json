@@ -63,9 +63,9 @@
         "tag": "app"
       },
       {
-        "da_title": "For sjov",
-        "title": "For fun",
-        "tag": "fun"
+        "da_title": "Eksperimenter",
+        "title": "Experiments",
+        "tag": "exp"
       },
       {
         "da_title": "Gamle sager",
@@ -88,7 +88,7 @@
         "screenshot": "lores",
         "da_description": "En eksperimentiel app som konverterer ethvert billede til noget der ligner et skærmbillede fra et gammelt computer-system. Komplet med dithering algoritmer og emulering af attribute clashing.",
         "description": "An experimental app that converts any picture to something that resembles a screen dump from an old computer system. Complete with dithering algorithms and attribute clashing.",
-        "tags": [ "fun", "app" ]
+        "tags": [ "exp", "app" ]
       },
       {
         "title": "Street Art Copenhagen",
@@ -120,7 +120,7 @@
         "screenshot": "spacerocks_in_space",
         "da_description": "Sejt asteroide-spil, der kan styres med piletaster, touch og gamepad.",
         "description": "Cool asteroid game, controllable with arrow keys, touch and gamepad.",
-        "tags": [ "game", "fun" ]
+        "tags": [ "game", "exp" ]
       },
       {
         "title": "platformer",
@@ -128,7 +128,7 @@
         "screenshot": "platformer",
         "da_description": "Et simpelt lille platformspil kodet i CoffeeScript og gør brug af canvas.",
         "description": "A simple little platform game coded in CoffeeScript and makes use of canvas.",
-        "tags": [ "game", "fun" ]
+        "tags": [ "game", "exp" ]
       },
       {
         "title": "particles",
@@ -136,7 +136,7 @@
         "screenshot": "particles",
         "da_description": "En flot fyrværkeri-agtig partikelbrønd, som gør brug af canvas.",
         "description": "A pretty firework-ish particle fountain that makes use of canvas.",
-        "tags": [ "fun" ]
+        "tags": [ "exp" ]
       },
       {
         "title": "cirkelspil",
@@ -144,7 +144,7 @@
         "screenshot": "cirkelSpil",
         "da_description": "Simpelt lille spil hvor man skal klikke på cirkler.",
         "description": "A simple little game where you click on circles.",
-        "tags": [ "game", "fun" ]
+        "tags": [ "game", "exp" ]
       },
       {
         "title": "rain",
@@ -160,7 +160,7 @@
         "screenshot": "turbosweeper",
         "da_description": "Minestryger med autopilot. Kodet i Java kompileret til JavaScript med GWT.",
         "description": "Mine sweetper with auto pilot. Coded in Java compiled to JavaScript with GWT.",
-        "tags": [ "old", "game", "fun" ]
+        "tags": [ "old", "game", "exp" ]
       },
       {
         "title": "Matrix",
@@ -168,7 +168,7 @@
         "screenshot": "matrix",
         "da_description": "Kode-regn af japanske tegn i ægte Matrix-stil.",
         "description": "Rain of japaneese characters, Matrix style.",
-        "tags": [ "old", "fun" ]
+        "tags": [ "old", "exp" ]
       },
       {
         "title": "Star Rain",
@@ -176,7 +176,7 @@
         "screenshot": "starrain",
         "da_description": "Mit første forsøg med canvas. En regn af stjerner.",
         "description": "My first attempt at canvas. A rain of stars.",
-        "tags": [ "old", "fun" ]
+        "tags": [ "old", "exp" ]
       },
       {
         "title": "DWIB",
