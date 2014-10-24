@@ -159,7 +159,7 @@
         "url": "//demo.whim.dk/old/TurboSweeper/",
         "screenshot": "turbosweeper",
         "da_description": "Minestryger med autopilot. Kodet i Java kompileret til JavaScript med GWT.",
-        "description": "Mine sweetper with auto pilot. Coded in Java compiled to JavaScript with GWT.",
+        "description": "Minesweeper with auto pilot. Coded in Java compiled to JavaScript with GWT.",
         "tags": [ "old", "game", "exp" ]
       },
       {
