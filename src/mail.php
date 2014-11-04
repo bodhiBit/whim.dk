@@ -4,7 +4,10 @@
     if ($_POST["name"] && $_POST["email"] && $_POST["message"]) {
       $success = mail("Tommy@whim.dk",
         "[".$_SERVER["HTTP_HOST"]."] ".$_POST["subject"],
-        $_POST["name"]." <".$_POST["email"]."> skriver:\n\n".$_POST["message"]);
+        $_POST["name"]." <".$_POST["email"]."> skriver:\n\n".$_POST["message"],
+        "Reply-To: ".$_POST["email"]."\r\n".
+        "From: ".$_POST["email"]
+        );
       if ($success) {
         header("Location: thankyou");
         $header = "Success!";
