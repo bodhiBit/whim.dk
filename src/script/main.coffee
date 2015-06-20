@@ -1,7 +1,7 @@
 "use strict"
-Whimdow = require "./Whimdow.coffee"
-Whicon = require "./Whicon.coffee"
-Draggable = require "./Draggable.coffee"
+Whimdow = require "./_classes/Whimdow.coffee"
+Whicon = require "./_classes/Whicon.coffee"
+Draggable = require "./_classes/Draggable.coffee"
 
 ###
  main.coffee

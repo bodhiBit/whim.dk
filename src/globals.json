@@ -1,0 +1,211 @@
+{
+  "nav": [
+    {
+      "da_label": "Om mig",
+      "label": "About me",
+      "link":  "#about",
+      "icon":  "about"
+    },
+    {
+      "da_label": "Mine værker",
+      "label": "My work",
+      "link":  "#work",
+      "icon":  "work"
+    },
+    {
+      "da_label": "Erfaring",
+      "label": "Experience",
+      "link":  "#xp",
+      "icon":  "tools"
+    },
+    {
+      "da_label": "Kontakt mig",
+      "label": "Contact me",
+      "link":  "#contact",
+      "icon":  "contact"
+    }
+  ],
+  "footer": [
+    {
+      "da_label": "Min Github",
+      "label": "My Github",
+      "link":  "http://github.com/bodhiBit",
+      "icon":  "github"
+    },
+    {
+      "da_label": "Min Google+",
+      "label": "My Google+",
+      "link":  "https://plus.google.com/111778417532671763607/posts",
+      "icon":  "gplus"
+    },
+    {
+      "da_label": "Min LinkedIn",
+      "label": "My LinkedIn",
+      "link":  "https://www.linkedin.com/pub/tommy-pedersen/93/12a/980",
+      "icon":  "linkedin"
+    }
+  ],
+  "projectTags": [
+    {
+      "da_title": "Skole projekter",
+      "title": "School projects",
+      "tag": "school"
+    },
+    {
+      "da_title": "Spil",
+      "title": "Games",
+      "tag": "game"
+    },
+    {
+      "da_title": "Apps",
+      "title": "Apps",
+      "tag": "app"
+    },
+    {
+      "da_title": "Eksperimenter",
+      "title": "Experiments",
+      "tag": "exp"
+    },
+    {
+      "da_title": "Gamle sager",
+      "title": "Old stuff",
+      "tag": "old"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Todo",
+      "url": "//hotfox.whim.dk/todo/",
+      "screenshot": "todo",
+      "da_description": "Todo-liste app som virker offline, kan synkronisere med flere enheder uden login og kan installeres via Firefox.",
+      "description": "Todo-list app that works offline, syncronizes with multiple devices without login and is installable via Firefox.",
+      "tags": [ "app" ]
+    },
+    {
+      "title": "lores",
+      "url": "//demo.whim.dk/code/lores/",
+      "screenshot": "lores",
+      "da_description": "En eksperimentiel app som konverterer ethvert billede til noget der ligner et skærmbillede fra et gammelt computer-system. Komplet med dithering algoritmer og emulering af attribute clashing.",
+      "description": "An experimental app that converts any picture to something that resembles a screen dump from an old computer system. Complete with dithering algorithms and attribute clashing.",
+      "tags": [ "exp", "app" ]
+    },
+    {
+      "title": "Street Art Copenhagen",
+      "url": "//streetart.whim.dk/",
+      "screenshot": "streetart",
+      "da_description": "Mini-projekt om street-art. Henter relevante billeder fra Instagram.",
+      "description": "Mini-projekt about street-art. Fetches relevant pictures from Instagram.",
+      "tags": [ "school" ]
+    },
+    {
+      "title": "SmagSilkeborg",
+      "url": "//smagsilkeborg.whim.dk/",
+      "screenshot": "smagsilkeborg",
+      "da_description": "Mobile-first-løsning til foreningen SmagSilkeborg. Gør brug af geo-location til at finde de nærmeste medlemmer.",
+      "description": "Mobile-first-solution for the union SmagSilkeborg. Makes use of geo-location for finding nearest members.",
+      "tags": [ "school", "app" ]
+    },
+    {
+      "title": "Jul i Den Gamle By",
+      "url": "//julidengamleby.whim.dk/",
+      "screenshot": "julidengamleby",
+      "da_description": "Kampagneside for Den Gamle By's jule-arrangement. Komplet med dalende jule-sne!",
+      "description": "Campaign site for Den Gamle By's christmas event. Complete with falling christmas-snow!",
+      "tags": [ "school" ]
+    },
+    {
+      "title": "Space rocks... In space..!!",
+      "url": "//demo.whim.dk/code/spacerocks_in_space/",
+      "screenshot": "spacerocks_in_space",
+      "da_description": "Sejt asteroide-spil, der kan styres med piletaster, touch og gamepad.",
+      "description": "Cool asteroid game, controllable with arrow keys, touch and gamepad.",
+      "tags": [ "game", "exp" ]
+    },
+    {
+      "title": "platformer",
+      "url": "//demo.whim.dk/code/platformer.coffee/",
+      "screenshot": "platformer",
+      "da_description": "Et simpelt lille platformspil kodet i CoffeeScript og gør brug af canvas.",
+      "description": "A simple little platform game coded in CoffeeScript and makes use of canvas.",
+      "tags": [ "game", "exp" ]
+    },
+    {
+      "title": "particles",
+      "url": "//demo.whim.dk/code/particles/",
+      "screenshot": "particles",
+      "da_description": "En flot fyrværkeri-agtig partikelbrønd, som gør brug af canvas.",
+      "description": "A pretty firework-ish particle fountain that makes use of canvas.",
+      "tags": [ "exp" ]
+    },
+    {
+      "title": "cirkelspil",
+      "url": "//demo.whim.dk/code/cirkelSpil/",
+      "screenshot": "cirkelSpil",
+      "da_description": "Simpelt lille spil hvor man skal klikke på cirkler.",
+      "description": "A simple little game where you click on circles.",
+      "tags": [ "game", "exp" ]
+    },
+    {
+      "title": "rain",
+      "url": "//rain.inwebl.com/",
+      "screenshot": "rain",
+      "da_description": "Brainstorming app.",
+      "description": "Brainstorming app.",
+      "tags": [ "old", "app" ]
+    },
+    {
+      "title": "TurboSweeper",
+      "url": "//demo.whim.dk/old/TurboSweeper/",
+      "screenshot": "turbosweeper",
+      "da_description": "Minestryger med autopilot. Kodet i Java kompileret til JavaScript med GWT.",
+      "description": "Minesweeper with auto pilot. Coded in Java compiled to JavaScript with GWT.",
+      "tags": [ "old", "game", "exp" ]
+    },
+    {
+      "title": "Matrix",
+      "url": "//demo.whim.dk/old/matrix.html",
+      "screenshot": "matrix",
+      "da_description": "Kode-regn af japanske tegn i ægte Matrix-stil.",
+      "description": "Rain of japaneese characters, Matrix style.",
+      "tags": [ "old", "exp" ]
+    },
+    {
+      "title": "Star Rain",
+      "url": "//demo.whim.dk/old/starrain.html",
+      "screenshot": "starrain",
+      "da_description": "Mit første forsøg med canvas. En regn af stjerner.",
+      "description": "My first attempt at canvas. A rain of stars.",
+      "tags": [ "old", "exp" ]
+    },
+    {
+      "title": "DWIB",
+      "url": "//demo.whim.dk/old/dwib/",
+      "screenshot": "dwib",
+      "da_description": "Mit første forsøg med Ajax og DHTML. Et lille OS, der kører i browseren.",
+      "description": "My first attempt at Ajax and DHTML. A little OS inside the browser.",
+      "tags": [ "old", "app" ]
+    },
+    {
+      "title": "Puzzle Game",
+      "url": "//demo.whim.dk/old/puzzle/",
+      "screenshot": "puzzle",
+      "da_description": "Et gammelt DHTML puslespil.",
+      "description": "An old DHTML puzzle game.",
+      "tags": [ "old", "game" ]
+    }
+  ],
+  "da_contact": {
+    "name": "Dit navn",
+    "email": "Din e-mail",
+    "subject": "Emne",
+    "message": "Besked",
+    "send": "Send!"
+  },
+  "contact": {
+    "name": "Your name",
+    "email": "Your e-mail",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send!"
+  }
+}

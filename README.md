@@ -6,18 +6,10 @@ Requirements
 ------------
 The website is meant to be served from a typical [Apache+PHP](//apachefriends.org/) installation. The contact form and some images requires PHP.
 
-Compilation requires [node.js+npm](http://nodejs.org/) and [Grunt](http://gruntjs.com/).
+Compilation requires [node.js+npm](http://nodejs.org/).
 
 Compile
 -------
-Make sure you have the grunt cli tool installed.
-
-    $ npm install -g grunt-cli || sudo npm install -g grunt-cli
-
-Install dependencies into the local folder.
+Easy! Just run:
 
     $ npm install
-
-Compile!
-
-    $ grunt

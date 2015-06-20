@@ -1,0 +1,33 @@
+- var lang = "en"
+include _mixins
+include ./_layout.jade
+  | <!--[if lt IE 9]>
+  center
+    img(src="images/ierotate.gif")
+    marquee(bgcolor="black", width=640): font(color="yellow", size=6) The stylesheet for this website is way too awesome for Internet Explorer to comprehend and has thus been disabled to protect its feelings. This marquee will keep it distracted while you <a href="//mozilla.org/firefox">download Firefox</a>.
+    img(src="images/ierotate.gif")
+  | <![endif]-->
+  nav
+    ul
+      for n in nav
+        +icon(n.label, n.link, n.icon)
+  main
+    article#about
+      include:markdown ./_about.md
+    article#work
+      h2 My work
+      ul
+        for t in projectTags
+          +icon(t.title, "#"+t.tag+"-projects", "work")
+      for t in projectTags
+        +projectFolder(t.title, t.tag)
+    article#xp
+      h2 My arsenal of web experience
+      include ./_xp
+    article#contact
+      h2 Shoot me a message
+      include ./_contact
+  footer
+    ul
+      for n in footer
+        +link(n.label, n.link, n.icon)

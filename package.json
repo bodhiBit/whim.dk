@@ -1,16 +1,29 @@
 {
-  "name": "grunt-app",
+  "name": "whim",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "grunt"
+    "deploy": "gulp deploy",
+    "prepublish": "gulp",
+    "watch": "gulp watch"
   },
   "devDependencies": {
-    "grunt": "*",
-    "grunt-browserify": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-harp": "*",
-    "coffeeify": "*"
+    "coffee-script": "^1.9.3",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-coffeeify": "^0.1.8",
+    "gulp-concat-util": "^0.5.2",
+    "gulp-data": "^1.2.0",
+    "gulp-exec": "^2.1.1",
+    "gulp-indent": "^1.0.0",
+    "gulp-jade": "^1.0.1",
+    "gulp-livereload": "^3.8.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.0.3",
+    "gulp-toc": "^0.1.0",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.5",
+    "marked": "^0.3.3",
+    "vinyl-ftp": "^0.4.1"
   }
 }
